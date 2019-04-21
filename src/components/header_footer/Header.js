@@ -4,7 +4,20 @@ import AppBar from "@material-ui/core/AppBar";
 import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 
+// Components
+import SideDrawer from "./SideDrawer";
+
 class Header extends Component {
+  state = {
+    drawerOpen: false
+  };
+
+  toggleDrawer = value => {
+    this.setState({
+      drawerOpen: value
+    });
+  };
+
   render() {
     return (
       <div>
@@ -12,8 +25,8 @@ class Header extends Component {
           position="fixed"
           style={{
             backgroundColor: "#2f2f2f",
-            padding: "10px 0px",
-            boxShadow: "none"
+            boxShadow: "none",
+            padding: "10px 0px"
           }}
         >
           <Toolbar>
@@ -25,10 +38,15 @@ class Header extends Component {
             <IconButton
               aria-label="Menu"
               color="inherit"
-              onClick={() => console.log("Opening Drawer")}
+              onClick={() => this.toggleDrawer(true)}
             >
               <MenuIcon />
             </IconButton>
+
+            <SideDrawer
+              open={this.state.drawerOpen}
+              onClose={value => this.toggleDrawer(value)}
+            />
           </Toolbar>
         </AppBar>
       </div>
