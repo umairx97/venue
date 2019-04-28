@@ -23,7 +23,6 @@ export default class Discount extends Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="center_wrapper">
         <div className="discount_wrapper">
