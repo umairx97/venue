@@ -8,6 +8,8 @@ const Footer = () => {
         <div className="font_righteos footer_logo_venue"> The Venue</div>
         <div className="footer_copyright">
           The venue 2018. All rights reserved.
+          <br />
+          Created By Umair Ahmed
         </div>
       </Fade>
     </footer>
