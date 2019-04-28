@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Fade, Slide } from "react-reveal";
+import MyButton from "../Utils/MyButton";
 
 export default class Discount extends Component {
   state = {
@@ -46,7 +47,12 @@ export default class Discount extends Component {
                 sunt in culpa qui official
               </p>
 
-              <div>Button</div>
+              <MyButton
+                text="Purchase Tickets"
+                bck="#ffa800"
+                color="#ffffff"
+                link="http://www.google.com"
+              />
             </div>
           </Slide>
         </div>
